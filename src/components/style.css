@@ -1,55 +1,65 @@
-*,*::before,*::after{
-    box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    background: linear-gradient(to top,teal,red);
-    background: linear-gradient(to right,green,#eded41,rgb(222, 116, 116),green,gold);
-}
-.cal-grid{
-    display: grid;
-    margin-top: 2.2rem;
-    grid-template-columns: repeat(4,6rem);
-    grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
-    justify-content: center;
-}
-.span-two{
-    grid-column: span 2;
 
+body {
+  margin: 0;
+  background: linear-gradient(to right,gold,green,rgb(193, 193, 57), #a7e706);
 }
-.output{
-    grid-column: 1/-1;
-    background-color: rgba(0,0,0,.75);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding: .75rem;
-    word-wrap: break-word;
-    word-break: break-all;
-    color: white;
-    border-radius: 15px;
-    border: 2px solid red;
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 }
-.cal-grid >button{
-    cursor: pointer;
-    font-size: 2rem;
-    border: 2px solid rgb(90, 13, 234);
-    outline: none;
-    background-color: rgba(255,255,255,.75);
-    border-radius: 15px;
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 2px solid rgb(54, 9, 233);
+  border-radius: 20px;
+  outline: none;
+  
+  background-color: rgba(231, 11, 55, 0.75);
 }
-.cal-grid > button:hover{
-background-color: blanchedalmond;
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(49, 197, 83, 0.9);
+  color: red;
+  font-size: 2rem;
+  border:5px solid #0fd15d;
 }
-.cal-grid > button :focus{
-    background-color: rgba(0, 34, 223, 0.9);
+
+.span-two {
+  grid-column: span 2;
 }
-.output .pre-operand{
-    color: whitesmoke;
-    font-size: 1.5rem;
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(89, 75, 75, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 3px solid yellow;
+  word-break: break-all;
+  
 }
-.output .curr-op{
-    color: white;
-    font-size: 2.5rem;
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: #f6e30e;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
