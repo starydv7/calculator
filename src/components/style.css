@@ -28,16 +28,19 @@ body{
     word-wrap: break-word;
     word-break: break-all;
     color: white;
+    border-radius: 15px;
+    border: 2px solid red;
 }
 .cal-grid >button{
     cursor: pointer;
     font-size: 2rem;
-    border: 2px solid greenyellow;
+    border: 2px solid rgb(90, 13, 234);
     outline: none;
     background-color: rgba(255,255,255,.75);
+    border-radius: 15px;
 }
 .cal-grid > button:hover{
-
+background: linear-gradient(to right rgb(91, 158, 91),#d44444);
 }
 .cal-grid > button :focus{
     background-color: rgba(68, 84, 174, 0.9);
