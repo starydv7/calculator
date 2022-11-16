@@ -43,7 +43,7 @@ body{
 background-color: blanchedalmond;
 }
 .cal-grid > button :focus{
-    background-color: rgba(68, 84, 174, 0.9);
+    background-color: rgba(0, 34, 223, 0.9);
 }
 .output .pre-operand{
     color: whitesmoke;

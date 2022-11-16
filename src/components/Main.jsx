@@ -1,12 +1,28 @@
 import React, { useReducer } from 'react';
 import "./style.css";
+import Digit from './Digit';
 
-function reducer(state, action) {
-    
+ export const ACTIONS = {
+    ADD_DIGIT: "add-digits",
+    CHOOSE_OPERATION: "choose-operation",
+    CLEAR: "clear",
+    DELETE_DIGIT: "delete-digit",
+    EVALUTE:'evaluate',
 }
-const Main = () => {
-    const[{currentOperand,previousOperand,operation},dispatch]=useReducer(reducer,[])
+function reducer(state, { type, payload }) {
+  switch (type) {
+    case ACTIONS.ADD_DIGIT:
+      return {
+        ...state,
+        currentOperand: `${currentOperand || ""}${payload.digit}`,
+      };
+  }
+}
 
+const Main = () => {
+    const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(reducer, {})
+   
+    
   return (
     <div className="cal-grid">
       <div className="output">
@@ -15,7 +31,7 @@ const Main = () => {
       </div>
       <button className="span-two">Ac</button>
       <button>DEL</button>
-      <button>%</button>
+      <Digit digit="%" dispatch={dispatch}/>
       <button>1</button>
       <button>2</button>
       <button>3</button>
