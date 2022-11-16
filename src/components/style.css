@@ -40,7 +40,7 @@ body{
     border-radius: 15px;
 }
 .cal-grid > button:hover{
-background: linear-gradient(to right rgb(91, 158, 91),#d44444);
+background-color: blanchedalmond;
 }
 .cal-grid > button :focus{
     background-color: rgba(68, 84, 174, 0.9);
